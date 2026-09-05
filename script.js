@@ -92,7 +92,7 @@ function scrollReviews(evt, direction) {
 }
 
 function checkLinks() {
-    if (navigator.userAgentData.mobile) {
+    if (/Mobi/i.test(navigator.userAgent)) {
         document.querySelectorAll('a[target="_blank"]').forEach(link => {
             link.setAttribute('target', '_self');
         })

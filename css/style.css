@@ -513,7 +513,7 @@ section {
 #about div .social {
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 15px;
   height: 50px;
 }
 #about div .social a img {
@@ -660,6 +660,16 @@ footer span {
 }
 
 @media (max-width: 1400px) {
+  .social {
+    display: grid !important;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    grid-template-columns: 50px 50px auto;
+    gap: 25px !important;
+    row-gap: 12.5px !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
   h1 {
     font-size: 4.5vw;
   }
@@ -674,15 +684,6 @@ footer span {
   }
 }
 @media (max-width: 1300px) {
-  .social {
-    display: grid !important;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    grid-template-columns: 50px auto;
-    row-gap: 12.5px !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-  }
   #reviews .reviews .review {
     flex: 0 0 100%;
   }
